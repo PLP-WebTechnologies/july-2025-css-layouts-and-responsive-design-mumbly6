@@ -1,0 +1,98 @@
+/* ===== Global Styles ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Navbar (Flexbox) ===== */
+.navbar {
+  display: flex; /* Flexbox for horizontal layout */
+  justify-content: center;
+  gap: 20px;
+  background: #2c3e50;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Main Layout (Grid) ===== */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Content + Sidebar */
+  gap: 20px;
+  padding: 20px;
+}
+
+.content, .sidebar {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* ===== Cards (Flexbox) ===== */
+.card-container {
+  display: flex; /* Flexbox for cards */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  background: #e6f0ff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* ===== Responsive Design (Media Queries) ===== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack sidebar below content */
+  }
+
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* Stack nav links */
+  }
+
+  .navbar a {
+    padding: 10px 0;
+  }
+}
